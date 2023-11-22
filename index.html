@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahaweli Authority Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #8e44ad, #2980b9);
+            color: #fff;
+        }
+
+        header {
+           
+            text-align: center;
+        }
+
+        section {
+          
+            text-align: center;
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            margin: auto;
+            text-align: left;
+        }
+
+        button {
+           border-radius: 15px;
+           background-color: #8e44ad;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.5s ease;
+            width:100%;
+        }
+        h3,p,h2{
+        color: black;
+      
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h1>SYSTEM B</h1>
+        <!-- User Card -->
+
+
+        <div class="card">
+            <h2>RPM'S OFFICE, SYSTEM B, WELIKANDA</h2>
+            <p style="color: gray;">office line contact center</p>
+            <p>Fax: <span id="a">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="a"> 260 </span></p>
+            <p>Call Landline Line 01: <span id="a">027-2259023  </span></p>
+            <p>Call Landline Line 02: <span id="b">027-2259073</span></p>
+        
+            <p>Email one: <span id="email1">rpmwelikanda@gmail</span></p>
+            <p>Email two: <span id="email2">rpmbwelikanda@gmail.com</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('a')">Call Landline Line 01</button>
+            <button onclick="callNumber('b', true)">Call Landline Line 02</button>
+            <button onclick="openEmailApp1()">Send Email Line 01</button>
+            <button onclick="openEmailApp2()">Send Email Line 02</button>
+
+            <script>
+                function openEmailApp1() {
+                    var email = document.getElementById('email1').textContent;
+                    window.location.href = 'mailto:' + email1;
+                }
+                function openEmailApp2() {
+                    var email = document.getElementById('email2').textContent;
+                    window.location.href = 'mailto:' + email2;
+                }
+        
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mr. W.M. Sugath Werasingha</h2>
+            <p style="color: gray;">Designation: Resident Project Manager</p>
+            <p>Fax: <span id="">027-2259065</span></p>
+            <p style="font-weight: bold;">In Com: <span id="">100</span></p>
+            <p>Call Landline: <span id="rpm_land">027-2259023</span></p>
+            <p>Call Mobile: <span id="rpm_mobile">076-6662170</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('rpm_land')">Call Landline</button>
+            <button onclick="callNumber('rpm_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+       
+        <div class="card">
+            <h2>Eng. E.K.D.Thennakoon </h2>
+            <p style="color: gray;">Designation:Deputy Resident Project Manager (T/S)</p>
+            <p>Fax: <span id="">027-2259065</span></p>
+            <p style="font-weight: bold;">In Com: <span id="">500</span></p>
+            <p>Call Landline: <span id="drpm_land">027-2259051</span></p>
+            <p>Call Mobile: <span id="drpm_mobile">071-8126937</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('drpm_land')">Call Landline</button>
+            <button onclick="callNumber('drpm_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+ 
+        <div class="card">
+            <h2>Mr. W.M.P.K.Wijesundara</h2>
+            <p style="color: gray;">Designation:Deputy Resident Project Manager(Agriculture)</p>
+            <p>Fax: <span id="">027-2259065</span></p>
+            <p style="font-weight: bold;">In Com: <span id="">111</span></p>
+            <p>Call Landline: <span id="drpmag_land">027-2259028</span></p>
+            <p>Call Mobile: <span id="drpmag_mobile">076-8800675</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('drpmag_land')">Call Landline</button>
+            <button onclick="callNumber('drpmag_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+
+        <div class="card">
+            <h2>Mrs.K.D.D. Anushka Jayarathna</h2>
+            <p style="color: gray;">Designation:Deputy Resident Project Managerr (Development)</p>
+            <p>Fax: <span id="">027-2259065</span></p>
+            <p style="font-weight: bold;">In Com: <span id="">800</span></p>
+            <p>Call Landline: <span id="drpmd_land">027-2259301</span></p>
+            <p>Call Mobile: <span id="drpmd_mobile">071-8742523</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('drpmd_land')">Call Landline</button>
+            <button onclick="callNumber('drpmd_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mr. B.M.B.N. Basnayaka</h2>
+            <p style="color: gray;">Designation:Accountant</p>
+            <p>Fax: <span id="">027-2259065</span></p>
+            <p style="font-weight: bold;">In Com: <span id="">400</span></p>
+            <p>Call Landline: <span id="ac_land">027-2259057</span></p>
+            <p>Call Mobile: <span id="ac_mobile"> 077-9255729</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('ac_land')">Call Landline</button>
+            <button onclick="callNumber('ac_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mrs. S.D. De Silva</h2>
+            <p style="color: gray;">Designation:Assist. Director Legal (AD) </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">202</span></p>
+            <p>Call Landline: <span id="adl_land">027-3279906</span></p>
+            <p>Call Mobile: <span id="adl_mobile"> 071-5310439</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('adl_land')">Call Landline</button>
+            <button onclick="callNumber('adl_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mr. D.C. Weerathunga </h2>
+            <p style="color: gray;">Designation:Engineer (Civil) </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">502</span></p>
+           
+            <p>Call Mobile: <span id="ec_mobile"> 077-8944418</span></p>
+
+            <!-- Buttons -->
+          
+            <button onclick="callNumber('ec_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mr. A.M.Ali Rajei  </h2>
+            <p style="color: gray;">Designation:Engineer (Civil) </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">502</span></p>
+         
+            <p>Call Mobile: <span id="ec_mobile2">070-3436113</span></p>
+
+            <!-- Buttons -->
+           
+            <button onclick="callNumber('ec_mobile2', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mr. S.J. Abdul Manaaf</h2>
+            <p style="color: gray;">Designation:Engineer (Civil) </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">502</span></p>
+          
+            <p>Call Mobile: <span id="ec_mobile3">077-3744468</span></p>
+
+            <!-- Buttons -->
+     
+            <button onclick="callNumber('ec_mobile3', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Miss. R.M.C.J. Rathnayake</h2>
+            <p style="color: gray;">Designation:Agronomist </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">112</span></p>
+         
+            <p>Call Mobile: <span id="agr_mobile1">076-7683293</span></p>
+
+            <!-- Buttons -->
+          
+            <button onclick="callNumber('agr_mobile1', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mr. W.R.A.T.P. Wijesundara</h2>
+            <p style="color: gray;">Designation:Agronomist </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">111</span></p>
+         
+            <p>Call Mobile: <span id="agr_mobile2">070-2581012</span></p>
+
+            <!-- Buttons -->
+         
+            <button onclick="callNumber('agr_mobile2', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Miss. H.M.Chandani Herath </h2>
+            <p style="color: gray;">Designation:Admin Officer </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">301</span></p>
+            <p>Call Landline: <span id="ao_land">027-2259297</span></p>
+            <p>Call Mobile: <span id="ao_mobile">078-9759885</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('ao_land')">Call Landline</button>
+            <button onclick="callNumber('ao_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+        <div class="card">
+            <h2>Mr. N.G.Sampath Rohitha </h2>
+            <p style="color: gray;">Designation:Land Officer </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">201</span></p>
+           
+            <p>Call Mobile: <span id="lo_mobile">071-8201806</span></p>
+
+            <!-- Buttons -->
+        
+            <button onclick="callNumber('lo_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mr. P.G.Prabath Beddegama </h2>
+            <p style="color: gray;">Designation:Land Officer </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">201</span></p>
+           
+            <p>Call Mobile: <span id="lo_mobile1">074-3399939</span></p>
+
+            <!-- Buttons -->
+        
+            <button onclick="callNumber('lo_mobile1', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mr. G.K.Sarath Nanda Kumara</h2>
+            <p style="color: gray;">Designation:Supply Officer  </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">600</span></p>
+            <p>Call Landline: <span id="so_land">027-2259333</span></p>
+            <p>Call Mobile: <span id="so_mobile">077-7045875</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('so_land')">Call Landline</button>
+            <button onclick="callNumber('so_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Miss. O.K.D. Indu Kumari</h2>
+            <p style="color: gray;">Designation:Business Development Officer </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">800</span></p>
+            <p>Call Landline: <span id="bdo_land">027-2259301</span></p>
+            <p>Call Mobile: <span id="bdo_mobile">071-1729365</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('bdo_land')">Call Landline</button>
+            <button onclick="callNumber('bdo_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mr. D.B.U. Chandradasa</h2>
+            <p style="color: gray;">Designation: Institutional Development Officer </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">800</span></p>
+            <p>Call Landline: <span id="ado_land">027-3279174</span></p>
+            <p>Call Mobile: <span id="ado_mobile">070-5612178</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('ado_land')">Call Landline</button>
+            <button onclick="callNumber('ado_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mrs. S.P.I. Sandamali</h2>
+            <p style="color: gray;">Designation:Physical Planner </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">203</span></p>
+           
+            <p>Call Mobile: <span id="ph_mobile">077-7125745</span></p>
+
+            <!-- Buttons -->
+        
+            <button onclick="callNumber('ph_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mr. V.N.K.Weerasinghe</h2>
+            <p style="color: gray;">Designation:Computer Information Technology and Programmer</p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">None</span></p>
+           
+            <p>Call Mobile: <span id="citp_mobile">071-9324153</span></p>
+
+            <!-- Buttons -->
+        
+            <button onclick="callNumber('citp_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Mrs. S.B.Y.M.A.K.K.Siwrathna</h2>
+            <p style="color: gray;">Designation: Progress Monitoring Officer </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">101</span></p>
+            <p>Call Landline: <span id="pmo_land">027-2259073</span></p>
+            <p>Call Mobile: <span id="pmo_mobile">077-3014853</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('pmo_land')">Call Landline</button>
+            <button onclick="callNumber('pmo_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+        <div class="card">
+            <h2>Miss S.G. Anusha </h2>
+            <p style="color: gray;">Designation: Agriculture officer </p>
+            <p>Fax: <span id="">027-2259065 </span></p>
+            <p style="font-weight: bold;">In Com: <span id="">None</span></p>
+            <p>Call Landline: <span id="ao2_land">027-2259022</span></p>
+            <p>Call Mobile: <span id="ao2_mobile">078-9945095</span></p>
+
+            <!-- Buttons -->
+            <button onclick="callNumber('ao2_land')">Call Landline</button>
+            <button onclick="callNumber('ao2_mobile', true)">Call Mobile</button>
+
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+        <hr>
+
+
+
+
+        <!-- More content goes here -->
+        <footer>
+            <p style="color: white;">Developmet & Publish by Department of IT - Sri lanka Mahaweli Aithority </p>
+        </footer>
+    </section>
+  
+
+</body>
+</html>
