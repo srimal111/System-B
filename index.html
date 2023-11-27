@@ -1,85 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start; /* Align to the top of the web page */
-      height: 100vh;
-      margin: 0;
-      font-size: 12px; /* Set font size to 12px */
-      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    table {
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-      width: 90px; /* Set column width to auto */
-    }
+        .contact-card {
+            width: 340px;
+            height: 85px;
+            border: none;
+            display: flex;
+            justify-content: space-between; /* Align items with space between them */
+            align-items: center; /* Center vertically */
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            margin-bottom: 5px; /* Add margin between cards */
+        }
 
-    th {
-      background-color: #f2f2f2;
-    }
+        .contact-details {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
 
-    /* Set height for cells in the "Name & Designation" column */
-    td:nth-child(1) {
-      height: 10px;
-      
-    }
-    button{
-        width: 90px;
-        text-align: left;
-        font-size: 10px;
-        height: 20px;
-        margin: 1px;
-        border-radius: 25px;
-        border: none;
-        background-color: blueviolet;
-        color: white;
-    }
-  </style>
+        .contact-image-container {
+            width: 50px;
+            height: 60px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
+
+        .contact-image {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .name {
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .job-title {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        
+        .contact-buttons {
+            display: flex;
+            flex-direction: column; /* Align buttons vertically */
+            align-items: flex-end; /* Align buttons to the right */
+            padding: 10px;
+        }
+
+        .call-button {
+            margin-top: 5px; /* Add spacing between buttons */
+            padding: 5px 10px;
+            background-color: rgb(60, 60, 148);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 90px;
+            height: 25px;
+            font-size: x-small;
+        }
+
+        p {
+            color: gray;
+            font-size: x-small;
+        }
+        .disgnation{
+            font-size: x-small;
+            color: gray;
+        }
+        .st2{
+            color: gray;
+        }
+       
+    </style>
 </head>
 <body>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name & Designation</th>
-      <th style="text-align: center;">In Com</th>
-      <th style="text-align: center;" colspan="2">Mobile Line<br> Land Line</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td data-label="Name & Designation">A K M N K WIKRAMANAYAKE    <br> ( land officer)    </td>
-      <td style="text-align: center;">300</td>
-      <td data-label="Mobile Line" style="width: 150px; text-align: center;" colspan="2">123-456-7890 <br>987-654-3210</td>
-      <td></td>
     
-   
-    </tr>
-  
-    <!-- Add more rows as needed -->
-  </tbody>
-</table>
+    <div class="contact-container">
+        <h3 style="text-align:center;"><b>CIRCUIT BANGALOW</b><br><span class="st2">RUHUNUKETHA</span></h3>
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr.Ranjith<br>
+                        <span class="disgnation">Circuit Keeper (Ruhunuketha)</span><br>
+                        <p>
+                         Mobile 1 : <span id="cbr_mobile1">078-4502728</span><br>
+                         Mobile 2 : <span id="cbr_mobile2">0776459085</span>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('cbr_mobile1')">Call Mobile 1</button>
+                <button class="call-button" onclick="callNumber('cbr_mobile2')">Call Mobile 2</button>
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
 
-<script>
-  function callNumber(phoneNumber) {
-    // You can add your logic here to handle the "Call Now" functionality
-    alert("Calling " + phoneNumber);
-    // Example: You might want to use a library like Twilio to initiate a phone call
-  }
-</script>
+
+
+        <!-- Add another card below -->
+       
+        <h3 style="text-align:center;"><b>CIRCUIT BANGALOW</b><br><span class="st2">PIBURATHTHAWA</span></h3>
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr. Sumanadasa<br>
+                        <span class="disgnation">Circuit Keeper (Pimburaththawa)</span><br>
+                        <p>
+                         Mobile : <span id="cbp_mobile">071-5421334</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('cbp_mobile')">Call Mobile</button>
+              
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+    
+        
+        <div class="contact-card">
+            <div class="contact-details">
+                <div class="contact-image-container">
+                    <img class="contact-image" src="one.jpg" alt="Profile Image">
+                </div>
+                <div>
+                    <div class="name">Mr. Priyantha<br>
+                        <span class="disgnation">Circuit Keeper (Pimburaththawa)</span><br>
+                        <p>
+                         Mobile : <span id="cbp2_mobile">'071-2760586</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-buttons">
+                <button class="call-button" onclick="callNumber('cbp2_mobile')">Call Mobile</button>
+              
+            </div>
+            <script>
+                function callNumber(number, isMobile = false) {
+                    var prefix = isMobile ? 'tel:' : 'tel:';
+                    window.location.href = prefix + document.getElementById(number).textContent;
+                }
+            </script>
+        </div>
+    
+
+
+
+
+
+    </div>
 
 </body>
 </html>
